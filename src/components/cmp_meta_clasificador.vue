@@ -67,8 +67,7 @@
         name:'cmp-Inicio',
         mounted(){
             this.get_metas();
-            this.get_clasificador();
-            this.kit_por_meta_cadena();
+            //this.get_clasificador();
         },
         
         data(){

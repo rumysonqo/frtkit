@@ -177,47 +177,7 @@ export default {
                 console.log(error);
             }
         },
-
-
-        async kit_por_programa_old(){
-                if(this.cadena==='' && this.cod_meta==null){
-                    try{
-                    let datos=await axios.get(url+'kit_por_programa/'+this.cod_prg)
-                    console.log(datos.data);
-                    this.ds_kit=await datos.data 
-                    }catch(error){
-                    console.log(error);
-                    }
-                }else{
-                    try{
-                    let datos=await axios.get(url+'kit_por_programa_cadena/'+this.cod_prg+'/'+this.cadena)
-                    console.log(datos.data);
-                    this.ds_kit=await datos.data 
-                    }catch(error){
-                    console.log(error);
-                    }
-                }
-        },
         
-        async kit_por_programa_meta_cadena_old(){
-        if(this.cadena===''){
-            try{
-                let datos=await axios.get(url+'kit_por_programa_meta/'+this.cod_prg+'/'+this.cod_meta)
-                console.log(datos.data);
-                this.ds_kit=await datos.data 
-            }catch(error){
-                console.log(error);
-            }
-        }else{
-            try{
-                let datos=await axios.get(url+'kit_por_programa_meta_cadena/'+this.cod_prg+'/'+this.cod_meta+'/'+this.cadena)
-                console.log(datos.data);
-                this.ds_kit=await datos.data 
-            }catch(error){
-                console.log(error);
-            }
-        }
-        }
     }
 }
 </script>

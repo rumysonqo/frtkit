@@ -11,7 +11,7 @@
             label="Seleccione una meta"
             dense
             outlined
-            @change="get_tareas(), kit_por_meta()"
+            @change="get_tareas()"
           >
           </v-select>
     
@@ -118,6 +118,13 @@
                 class:'deep-purple accent-4 white--text'
                 },
                 {
+                text:'PROGRAMA',
+                align:'start',
+                filterable: false,
+                value:'programa',
+                class:'deep-purple accent-4 white--text'
+                },
+                {
                 text:'META',
                 align:'start',
                 filterable: false,
@@ -158,16 +165,6 @@
                     console.log(error);
                 }
             },
-            
-            async kit_por_meta(){
-                try{
-                let datos=await axios.get(url+'kit_por_meta/'+this.cod_meta)
-                console.log(datos.data);
-                this.ds_kit=await datos.data 
-                }catch(error){
-                console.log(error);
-                }
-          },
           
           async kit_por_meta_tarea(){
             try{

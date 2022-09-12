@@ -52,7 +52,7 @@
         name:'cmp-Inicio',
         mounted(){
             this.get_clasificador();
-            this.kit_por_clasificador();
+            //this.kit_por_clasificador();
         },
         
         data(){
